@@ -89,7 +89,8 @@
   ];
   var grid = document.getElementById('grid');
   sections.forEach(function(s){
-    var lis = s.articles.map(function(a){ return '<li>'+ICON+'<a href="#">'+a+'</a></li>'; }).join('');
+    var LINKS = {"What is Strategy Builder?":"what-is-strategy-builder.html"};
+    var lis = s.articles.map(function(a){ return '<li>'+ICON+'<a href="'+(LINKS[a]||'#')+'">'+a+'</a></li>'; }).join('');
     var card = document.createElement('div');
     card.className = 'card';
     card.innerHTML =
